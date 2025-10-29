@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Radio</title>
+</head>
+<body>
+  <h2>Escolha uma cor:</h2>
+
+  <label><input type="radio" name="cor" value="Vermelho" checked> Vermelho</label>
+  <label><input type="radio" name="cor" value="Verde"> Verde</label>
+  <label><input type="radio" name="cor" value="Azul"> Azul</label>
+
+  <br><br>
+  <button onclick="mostrarEscolha()">Mostrar escolha</button>
+
+  <p id="resultado">Nenhuma escolha ainda.</p>
+
+  <script>
+    function mostrarEscolha() {
+      var selecionado = document.querySelector('input[name="cor"]:checked');/*serve para selecionar elementos no JavaScript com base em seletores CSS do HTML*/
+      var resultado = document.getElementById('resultado');
+
+      if (selecionado) { //se o radiobutton estiver selecionado mostra qual cor
+        resultado.innerHTML = 'Você escolheu: ' + selecionado.value;
+      } else {
+        resultado.innerHTML = 'Nenhuma opção selecionada.';
+      }
+    }
+  </script>
+</body>
+</html>
