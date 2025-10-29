@@ -3,7 +3,6 @@ let notas = [];
 
 // Função para adicionar uma nova nota
 function adicionar() {
-    // Pega o valor do campo de texto
     const notaInput = document.getElementById('nota');
     const textoNota = notaInput.value.trim();
 
@@ -14,7 +13,7 @@ function adicionar() {
     }
 
     // Identifica se a nota é urgente ou não
-    const urgente = document.querySelector('input[name="urgencia"]:checked').value === "urgente";
+    const urgente = document.querySelector('input[name="urgencia"]:checked')?.value === "urgente";
 
     // Cria um objeto para a nota
     const nota = {
