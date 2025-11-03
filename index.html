@@ -1,31 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini Projeto - Notas</title>
-    <link rel="stylesheet" href="css.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notas Rápidas</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <h1>Notas Rápidas</h1>
 
-    <div class="container">
-        <h1>MINI PROJETO</h1>
+  <div class="controle">
+    <input type="text" id="textoNota" placeholder="Digite sua nota aqui...">
+    <button onclick="adicionarNota()">Adicionar</button>
+  </div>
 
-        <input type="text" id="nota" placeholder="Digite sua nota aqui"> <br><br>
+  <div class="radio-group">
+    <h3>Marcar urgência:</h3>
+    <label><input type="radio" name="urgencia" value="nao" checked> Não Urgente</label>
+    <label><input type="radio" name="urgencia" value="sim"> Urgente</label>
+  </div>
 
-        <label><input type="radio" name="urgencia" value="urgente" checked> Urgente</label>
-        <label><input type="radio" name="urgencia" value="naourgente"> Não urgente</label>
+  <button id="apagarTudo" onclick="apagarTudo()">Apagar Tudo</button>
 
-        <br><br>
+  <div id="container"></div>
 
-        <input type="button" value="ADICIONAR" onclick="adicionar()">
-        <input type="button" value="APAGAR TUDO" onclick="apagarTudo()">
-
-        <h3>Notas:</h3>
-
-        <div id="notasContainer"></div>
-    </div>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
