@@ -1,4 +1,4 @@
-var cores = ["#6cbaff", "#6cff8f", "#c86cff"]; // Azul, Verde, Roxo
+var cores = ["#6cbaff", "#6cff8f", "#c86cff"]; 
 var indiceCor = 0;
 
 function adicionarNota() {
@@ -18,7 +18,6 @@ function adicionarNota() {
   novaNota.style.backgroundColor = cores[indiceCor];
   indiceCor = (indiceCor + 1) % cores.length;
 
-  // Define cor do texto conforme urgência
   if (urgenciaSelecionada === "sim") {
     novaNota.classList.add("urgente");
   } else {
