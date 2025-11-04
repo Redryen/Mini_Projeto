@@ -1,12 +1,12 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f2f5;
+  background-color: #b4bfcfcb;
   text-align: center;
   padding: 20px;
 }
 
 h1 {
-  color: #333;
+  color: #17134d;
 }
 
 .controle {
@@ -16,7 +16,7 @@ h1 {
 input[type="text"] {
   padding: 10px;
   width: 250px;
-  border: 2px solid #333;
+  border: 2px solid #3d367e;
   border-radius: 5px;
 }
 
@@ -25,18 +25,14 @@ button {
   margin: 5px;
   border: none;
   border-radius: 5px;
-  background-color: #333;
-  color: white;
-  cursor: pointer;
-  transition: 0.3s;
 }
 
-button:hover {
-  background-color: #555;
-}
-
-.radio-group {
+.radio {
   margin: 10px 0;
+}
+
+.contbotao {
+  margin-top: 15px;
 }
 
 #container {
@@ -51,30 +47,24 @@ button:hover {
   padding: 12px;
   margin: 8px 0;
   border-radius: 10px;
-  box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: black;
   font-weight: bold;
   transition: transform 0.2s ease;
 }
 
-.nota:hover {
-  transform: scale(1.02);
-}
-
-.nota button {
-  background-color: crimson;
-  color: white;
-  font-size: 12px;
-  padding: 5px 8px;
-}
-
 .urgente {
-  color: red; /* Texto vermelho */
+  color: rgb(158, 44, 44); 
 }
 
 .nao-urgente {
-  color: #d7ff00; /* Texto amarelo-limão */
+  color: rgb(234, 236, 104); 
 }
+
+button {
+  background-color: #513d80;
+  color: white;
+  font-size: 14px;
+}
+

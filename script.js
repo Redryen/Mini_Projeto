@@ -6,15 +6,10 @@ function adicionarNota() {
   var divContainer = document.getElementById("container");
   var urgenciaSelecionada = document.querySelector('input[name="urgencia"]:checked').value;
 
-  if (texto.trim() === "") {
-    alert("Digite algo antes de adicionar!");
-    return;
-  }
-
   var novaNota = document.createElement("div");
   novaNota.classList.add("nota");
 
-  // Fundo segue a sequência azul → verde → roxo
+//Sequencia da cor do fundo
   novaNota.style.backgroundColor = cores[indiceCor];
   indiceCor = (indiceCor + 1) % cores.length;
 
@@ -27,14 +22,7 @@ function adicionarNota() {
   var textoNota = document.createElement("span");
   textoNota.innerText = texto;
 
-  var botaoRemover = document.createElement("button");
-  botaoRemover.innerText = "Remover";
-  botaoRemover.onclick = function() {
-    novaNota.remove();
-  };
-
   novaNota.appendChild(textoNota);
-  novaNota.appendChild(botaoRemover);
   divContainer.appendChild(novaNota);
 
   document.getElementById("textoNota").value = "";
@@ -43,4 +31,12 @@ function adicionarNota() {
 function apagarTudo() {
   var container = document.getElementById("container");
   container.innerHTML = "";
+}
+
+function removerUltimaNota() {
+  var container = document.getElementById("container");
+  var ultNota = container.lastElementChild;
+  if (ultNota) {
+    container.removeChild(ultNota);
+  }
 }

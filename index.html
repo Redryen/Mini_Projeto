@@ -4,26 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Notas Rápidas</title>
+
   <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
+
   <h1>Notas Rápidas</h1>
 
   <div class="controle">
-    <input type="text" id="textoNota" placeholder="Digite sua nota aqui...">
+    <input type="text" id="textoNota" placeholder="Digite sua nota aqui">
     <button onclick="adicionarNota()">Adicionar</button>
   </div>
 
-  <div class="radio-group">
+  <div class="radio">
     <h3>Marcar urgência:</h3>
     <label><input type="radio" name="urgencia" value="nao" checked> Não Urgente</label>
     <label><input type="radio" name="urgencia" value="sim"> Urgente</label>
   </div>
 
-  <button id="apagarTudo" onclick="apagarTudo()">Apagar Tudo</button>
+  <div class="contbotao">
+    <button id="apagarTudo" onclick="apagarTudo()">Apagar tudo</button>
+    <button id="removerUltima" onclick="removerUltimaNota()">Remover última nota</button>
+  </div>
 
   <div id="container"></div>
 
   <script src="script.js"></script>
+
 </body>
 </html>
