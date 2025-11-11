@@ -14,15 +14,13 @@ function adicionarNota() {
 
   if (urgenciaSelecionada == "sim") {
     novaNota.classList.add("urgente")
-    document.getElementById("divUrgentes").appendChild(novaNota)
   } else {
     novaNota.classList.add("naoUrgente")
-    document.getElementById("divNaoUrgentes").appendChild(novaNota)
   }
 
   novaNota.innerText = texto
 
-  divContainer.appendChild(novaNota);
+  divContainer.appendChild(novaNota)
 
   document.getElementById("textoNota").value = ""
 }
@@ -34,6 +32,6 @@ function apagarTudo() {
 
 function removerUltimaNota() {
   var container = document.getElementById("container")
-  var ultNota = container.lastElementChild
-    container.removeChild(ultNota)
+  var ultima = container.lastElementChild
+  container.removeChild(ultima)
 }

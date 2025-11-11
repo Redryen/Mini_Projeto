@@ -1,5 +1,4 @@
 body {
-  font-family: Arial, sans-serif;
   background-color: #b4bfcfcb;
   text-align: center;
   padding: 20px;
@@ -17,7 +16,7 @@ input[type="text"] {
   padding: 10px;
   width: 250px;
   border: 2px solid #3d367e;
-  border-radius: 5;
+  border-radius: 5px;
 }
 
 button {
@@ -25,6 +24,9 @@ button {
   margin: 5px;
   border: none;
   border-radius: 5px;
+  background-color: #513d80;
+  color: white;
+  font-size: 14px;
 }
 
 .radio {
@@ -42,30 +44,21 @@ button {
   align-items: center;
 }
 
-
 .nota {
   width: 300px;
   padding: 12px;
   margin: 8px 0;
   border-radius: 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   font-weight: bold;
-  transition: transform 0.2s ease;
 }
 
 .urgente {
-  color: rgb(158, 44, 44); 
+  color: rgb(158, 44, 44);
 }
 
 .naoUrgente {
-  color: rgb(234, 236, 104); 
+  color: rgb(234, 236, 104);
 }
-
-button {
-  background-color: #513d80;
-  color: white;
-  font-size: 14px;
-}
-
