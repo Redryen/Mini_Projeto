@@ -42,6 +42,7 @@ button {
   align-items: center;
 }
 
+
 .nota {
   width: 300px;
   padding: 12px;
@@ -58,7 +59,7 @@ button {
   color: rgb(158, 44, 44); 
 }
 
-.nao-urgente {
+.naoUrgente {
   color: rgb(234, 236, 104); 
 }
 

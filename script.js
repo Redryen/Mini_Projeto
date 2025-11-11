@@ -9,34 +9,31 @@ function adicionarNota() {
   var novaNota = document.createElement("div")
   novaNota.classList.add("nota")
 
-//Sequencia da cor do fundo
   novaNota.style.backgroundColor = cores[indiceCor]
   indiceCor = (indiceCor + 1) % cores.length
 
-  if (urgenciaSelecionada === "sim") {
+  if (urgenciaSelecionada == "sim") {
     novaNota.classList.add("urgente")
+    document.getElementById("divUrgentes").appendChild(novaNota)
   } else {
-    novaNota.classList.add("nao-urgente")
+    novaNota.classList.add("naoUrgente")
+    document.getElementById("divNaoUrgentes").appendChild(novaNota)
   }
 
-  var textoNota = document.createElement("span")
-  textoNota.innerText = texto
+  novaNota.innerText = texto
 
-  novaNota.appendChild(textoNota)
-  divContainer.appendChild(novaNota)
+  divContainer.appendChild(novaNota);
 
   document.getElementById("textoNota").value = ""
 }
 
 function apagarTudo() {
   var container = document.getElementById("container")
-  container.innerHTML = "";
+  container.innerHTML = ""
 }
 
 function removerUltimaNota() {
   var container = document.getElementById("container")
   var ultNota = container.lastElementChild
-  if (ultNota) {
     container.removeChild(ultNota)
-  }
 }
